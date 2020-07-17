@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    >
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:text="@string/defaultURL"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:gravity="top" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/fetch"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fetch"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick 6 pictures below and Start the game!"
+        android:textSize="20sp"
+        android:layout_below="@id/tags"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:clickable="true"
+        android:columnWidth="100dp"
+        android:focusable="true"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:layout_below="@id/info"
+        android:layout_above="@id/status"
+        android:verticalSpacing="5dp" />
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/ProBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:indeterminate="false"
+        android:max="20"
+        android:progress="0"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ProBar"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/popTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/trend"
+        android:layout_below="@id/url"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/popTag"
+        android:id="@+id/tags"
+        >
+
+        <Button
+            android:id="@+id/tag_food"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tag1" />
+        <Button
+            android:id="@+id/tag_love"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="@string/tag2"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            />
+        <Button
+            android:id="@+id/tag_biz"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="@string/tag3"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            />
+        <Button
+            android:id="@+id/tag_ppl"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="@string/tag4"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            />
+        </LinearLayout>
+
+
+</RelativeLayout>
